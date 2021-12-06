@@ -4,11 +4,6 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-    stage('Initialize')
-            {
-                def dockerHome = tool 'MyDocker'
-                env.PATH = '${dockerHome}/bin:${env.PATH}'
-            }
         stage('Build') {
             steps {
                 powershell './gradlew assemble'
