@@ -24,5 +24,10 @@ pipeline {
                 powershell 'docker-compose up'
             }
         }
+        stage('Sonar Analysis') {
+                    steps {
+                        powershell './gradlew sonarqube'
+                    }
+                }
     }
 }
