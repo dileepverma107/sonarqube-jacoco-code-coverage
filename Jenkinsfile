@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Run Docker Image') {
             steps {
-                powershell 'docker-compose up'
+                powershell './gradlew dockerRun'
             }
         }
         stage('Sonar Analysis') {
