@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Run Docker Image') {
             steps {
-                powershell './gradlew dockerRun'
+                powershell 'docker-compose up'
             }
         }
     }
