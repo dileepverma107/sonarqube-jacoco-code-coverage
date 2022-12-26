@@ -33,7 +33,7 @@ sonarqube {
 
 jacocoTestReport {
     reports {
-        xml.setEnabled(true)
+        reports.xml
     }
 }
 test.finalizedBy jacocoTestReport
