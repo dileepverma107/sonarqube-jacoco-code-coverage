@@ -31,14 +31,4 @@ sonarqube {
     }
 }
 
-jacocoTestReport {
-    reports {
-        xml.required = true
-        xml.outputLocation file("build/test/jacocoTestReport.xml")
-    }
-    
-}
-test.finalizedBy jacocoTestReport
-tasks.named('sonarqube').configure {
-    dependsOn test
-}
+
