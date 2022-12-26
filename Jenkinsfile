@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv(credentialsId:'sonar-token') {
-                       bat './gradlew sonarqube --warning-mode=all'
+                       bat './gradlew sonarqube --warning-mode fail --stacktrace'
                     }
                     
                     timeout(time:1 , unit:HOURS) {
