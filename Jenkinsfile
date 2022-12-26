@@ -19,11 +19,11 @@ pipeline {
                 powershell './gradlew docker'
             }
         }
-        stage('Run Docker Image') {
+       /* stage('Run Docker Image') {
             steps {
                 powershell './gradlew dockerRun'
             }
-        }
+        }*/
         stage('Sonar Analysis') {
                     steps {
                         powershell './gradlew sonarqube'
