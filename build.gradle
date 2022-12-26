@@ -27,8 +27,7 @@ docker {
 sonarqube {
     properties {
         property 'sonar.host.url', 'http://localhost:9000'
-        property 'sonar.login', 'admin'
-        property 'sonar.password', property('sonarPassword')
+        property 'sonar.login', 'squ_b4a60b8449b60704bf031af848912754f83dbdfd'
     }
 }
 
